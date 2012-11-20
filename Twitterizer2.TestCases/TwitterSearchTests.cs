@@ -14,7 +14,7 @@
             SearchOptions options = new SearchOptions();
             options.NumberPerPage = 19;
 
-            TwitterResponse<TwitterSearchResultCollection> searchResponse = TwitterSearch.Search("twitter", options);
+            TwitterResponse<TwitterSearchResultCollection> searchResponse = TwitterSearch.Search("ucommerce", options);
 
             Assert.IsNotNull(searchResponse);
             Assert.That(searchResponse.Result == RequestResult.Success, searchResponse.ErrorMessage);

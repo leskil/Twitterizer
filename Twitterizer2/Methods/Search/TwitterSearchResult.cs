@@ -145,8 +145,8 @@ namespace Twitterizer
         /// Gets or sets the geo location associated with the result.
         /// </summary>
         /// <value>The geo location data.</value>
-        [JsonProperty(PropertyName = "geo")]
-        public TwitterGeo Geo { get; set; }
+        //[JsonProperty(PropertyName = "geo")]
+        //public TwitterGeo Geo { get; set; }
 
         /// <summary>
         /// Gets or sets the location.

@@ -61,7 +61,12 @@ namespace Twitterizer
         /// <summary>
         /// A circle represented by a single point (the center) and the radius.
         /// </summary>
-        CircleByCenterPoint
+        CircleByCenterPoint,
+
+        /// <summary>
+        /// Represents a path. No really. It does. I have no idea what this is at the moment.
+        /// </summary>
+        Path
     }
 
     /// <summary>

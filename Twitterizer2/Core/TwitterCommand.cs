@@ -284,15 +284,15 @@ namespace Twitterizer.Core
             {
                 twitterResponse.ResponseObject = SerializationHelper<T>.Deserialize(responseData, this.DeserializationHandler);
             }
-            catch (Newtonsoft.Json.JsonReaderException)
+            catch (Newtonsoft.Json.JsonReaderException ex)
             {
-                twitterResponse.ErrorMessage = "Unable to parse JSON";
+                twitterResponse.ErrorMessage = "Unable to parse JSON (" + ex.Message + ")";
                 twitterResponse.Result = RequestResult.Unknown;
                 return twitterResponse;
             }
-            catch (Newtonsoft.Json.JsonSerializationException)
+            catch (Newtonsoft.Json.JsonSerializationException ex)
             {
-                twitterResponse.ErrorMessage = "Unable to parse JSON";
+                twitterResponse.ErrorMessage = "Unable to parse JSON (" + ex.Message + ")";
                 twitterResponse.Result = RequestResult.Unknown;
                 return twitterResponse;
             }
